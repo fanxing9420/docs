@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL—多表查询 | itmua文案网</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/docs/img/logo.png">
+    <meta name="description" content="一个专注于文学的文档">
+    <meta name="keywords" content="文案解说,电影文案,电视剧文案,情感文案,文学知识,鸡汤文案">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.43f57b07.css" as="style"><link rel="preload" href="/docs/assets/js/app.ab6a45ad.js" as="script"><link rel="preload" href="/docs/assets/js/2.4c059ea7.js" as="script"><link rel="preload" href="/docs/assets/js/30.a4008b67.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.469f6138.js"><link rel="prefetch" href="/docs/assets/js/11.ca25ceab.js"><link rel="prefetch" href="/docs/assets/js/12.a435673a.js"><link rel="prefetch" href="/docs/assets/js/13.fdae9bb2.js"><link rel="prefetch" href="/docs/assets/js/14.74504247.js"><link rel="prefetch" href="/docs/assets/js/15.bcc7ac3a.js"><link rel="prefetch" href="/docs/assets/js/16.81ac3f1c.js"><link rel="prefetch" href="/docs/assets/js/17.ad0c7034.js"><link rel="prefetch" href="/docs/assets/js/18.96a7a29f.js"><link rel="prefetch" href="/docs/assets/js/19.5c4d87b9.js"><link rel="prefetch" href="/docs/assets/js/20.d40a66d5.js"><link rel="prefetch" href="/docs/assets/js/21.38e9e3e1.js"><link rel="prefetch" href="/docs/assets/js/22.11efd413.js"><link rel="prefetch" href="/docs/assets/js/23.60938067.js"><link rel="prefetch" href="/docs/assets/js/24.5b2f3183.js"><link rel="prefetch" href="/docs/assets/js/25.4cd66f04.js"><link rel="prefetch" href="/docs/assets/js/26.102ed2db.js"><link rel="prefetch" href="/docs/assets/js/27.8be8c988.js"><link rel="prefetch" href="/docs/assets/js/28.7c79ab06.js"><link rel="prefetch" href="/docs/assets/js/29.4573089c.js"><link rel="prefetch" href="/docs/assets/js/3.474e0c06.js"><link rel="prefetch" href="/docs/assets/js/31.c298eea4.js"><link rel="prefetch" href="/docs/assets/js/32.cf09aea3.js"><link rel="prefetch" href="/docs/assets/js/33.c79d7f6f.js"><link rel="prefetch" href="/docs/assets/js/34.7ee17e6b.js"><link rel="prefetch" href="/docs/assets/js/35.af41e1b7.js"><link rel="prefetch" href="/docs/assets/js/36.afdd2bd1.js"><link rel="prefetch" href="/docs/assets/js/4.79f505c9.js"><link rel="prefetch" href="/docs/assets/js/5.b1267c0a.js"><link rel="prefetch" href="/docs/assets/js/6.162a034e.js"><link rel="prefetch" href="/docs/assets/js/7.7af3a297.js"><link rel="prefetch" href="/docs/assets/js/8.1016007f.js"><link rel="prefetch" href="/docs/assets/js/9.7c701c66.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.43f57b07.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/img/logo.png" alt="itmua文案网" class="logo"> <span class="site-name can-hide">itmua文案网</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/docs/start/" class="nav-link">
+  开始使用
+</a></div><div class="nav-item"><a href="/docs/notebook/" class="nav-link router-link-active">
+  笔记库
+</a></div><div class="nav-item"><a href="/docs/filmcopy/" class="nav-link">
+  电影文案
+</a></div><div class="nav-item"><a href="/docs/life/" class="nav-link">
+  生活随记
+</a></div><div class="nav-item"><a href="/docs/60s/60.html" class="nav-link">
+  每日60秒
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源仓库" class="dropdown-title"><span class="title">开源仓库</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源仓库" class="mobile-dropdown-title"><span class="title">开源仓库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fanxing9420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/docs/notebook/mysql/.html#" class="nav-link">
+  #
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/docs/start/" class="nav-link">
+  开始使用
+</a></div><div class="nav-item"><a href="/docs/notebook/" class="nav-link router-link-active">
+  笔记库
+</a></div><div class="nav-item"><a href="/docs/filmcopy/" class="nav-link">
+  电影文案
+</a></div><div class="nav-item"><a href="/docs/life/" class="nav-link">
+  生活随记
+</a></div><div class="nav-item"><a href="/docs/60s/60.html" class="nav-link">
+  每日60秒
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源仓库" class="dropdown-title"><span class="title">开源仓库</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源仓库" class="mobile-dropdown-title"><span class="title">开源仓库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fanxing9420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/docs/notebook/mysql/.html#" class="nav-link">
+  #
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MySQL笔记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/notebook/mysql/MySQLのDCL.html" class="sidebar-link">DCL—介绍</a></li><li><a href="/docs/notebook/mysql/MySQLのDQL.html" class="sidebar-link">DQL—介绍</a></li><li><a href="/docs/notebook/mysql/MySQLのDDL.html" class="sidebar-link">DDL—介绍</a></li><li><a href="/docs/notebook/mysql/MySQLのDML.html" class="sidebar-link">DML—介绍</a></li><li><a href="/docs/notebook/mysql/MySQL—多表查询.html" class="active sidebar-link">MySQL—多表查询</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/notebook/mysql/MySQL—多表查询.html#多表查询-子查询" class="sidebar-link">多表查询—子查询</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/mysql/MySQL—多表查询.html#多表查询-内连接外连接自链接" class="sidebar-link">多表查询—内连接外连接自链接</a></li></ul></li><li><a href="/docs/notebook/mysql/MySQL—函数.html" class="sidebar-link">MySQL—函数</a></li><li><a href="/docs/notebook/mysql/MySQL—事务.html" class="sidebar-link">MySQL—事务</a></li><li><a href="/docs/notebook/mysql/MySQL—约束.html" class="sidebar-link">MySQL—约束</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具类组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>方法类函数</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql-多表查询"><a href="#mysql-多表查询" class="header-anchor">#</a> MySQL—多表查询</h1> <h3 id="多表关系"><a href="#多表关系" class="header-anchor">#</a> 多表关系</h3> <p>项目开发中，在进行数据库表结构设计时，会根据业务需求及业务模块之间的关系，分析并设计表结构，由于业务之间相互关联，所以各个表结构之间也存在着各种联系，基本上分为三种:
+①一对多(多对一)</p> <p>②多对多</p> <p>③一对一</p> <h5 id="_1-一对多-多对一"><a href="#_1-一对多-多对一" class="header-anchor">#</a> 1.一对多（多对一）</h5> <p>​	案例:部门与员工的关系</p> <p>​	关系:一个部门对应多个员工，一个员工对应一个部门
+​	实现:<strong>在多的一方建立外键，指向一的一方的主键</strong></p> <h5 id="_2-多对多"><a href="#_2-多对多" class="header-anchor">#</a> 2.多对多</h5> <p>​	案例:学生与课程的关系
+​	关系:一个学生可以选修多门课程，一门课程也可以供多个学生选择</p> <p>​	实现:<strong>建立第三张中间表，中间表至少包含两个外键，分别关联两方主键</strong></p> <h5 id="_3-一对一"><a href="#_3-一对一" class="header-anchor">#</a> 3.一对一</h5> <p>案例:用户与用户详情的关系
+关系:一对一关系，多用于单表拆分，将一张表的基础字段放在一张表中，其他详情字段放在另一张表中，以提升操作效率</p> <p>实现:<strong>在任意一方加入外键，关联另外一方的主键，并且设置外键为唯一的(UNIQUE)</strong></p> <h3 id="多表查询-概述"><a href="#多表查询-概述" class="header-anchor">#</a> 多表查询—概述</h3> <p>1.概述:指从多张表中查询数据
+2.笛卡尔积:笛卡尔乘积是指在数学中，两个集合A集合和B集合的所有组合情况。(<strong>在多表查询时，需要消除无效的笛卡尔积</strong>)</p> <h3 id="多表查询-分类"><a href="#多表查询-分类" class="header-anchor">#</a> 多表查询—分类</h3> <p><strong>连接查询</strong> <strong>内连接</strong>:相当于查询A、B交集部分数据
+<strong>外连接:</strong>
+左外连接:查询  <u>左表</u>  所有数据，以及两张表交集部分数据
+右外连接:查询  <u>右表</u>  所有数据，以及两张表交集部分数据
+<strong>自连接</strong>:当前表与自身的连接查询，自连接必须使用表别名</p> <p><strong>子查询</strong></p> <h2 id="多表查询-子查询"><a href="#多表查询-子查询" class="header-anchor">#</a> 多表查询—子查询</h2> <h3 id="子查询"><a href="#子查询" class="header-anchor">#</a> 子查询</h3> <p>概念:SQL语句中嵌套SELECT语句，称为嵌套查询，又称子查询。</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT * FROM t1  WHERE column1=(SELECT column1 FROM t2)；
+</code></pre></div><p>子查询外部的语句可以是INSERT/ UPDATE/ DELETE/ SELECT的任何一个。
+<strong>根据子查询结果不同，分为:</strong></p> <p>​	1.标量子查询（子查询结果为单个值)</p> <p>​	2.列子查询(子查询结果为一列)
+​	3.行子查询(子查询结果为一行)</p> <p>​	4.表子查询(子查询结果为多行多列)</p> <h3 id="标量子查询"><a href="#标量子查询" class="header-anchor">#</a> 标量子查询</h3> <p>子查询返回的结果是单个值（数字、字符串、日期等），最简单的形式，这种子查询称为<strong>标量子查询</strong>。</p> <p>常用的操作符: =	&lt;&gt;	&gt;=	&lt; 	&lt;=    &gt;</p> <p><strong>例子：</strong></p> <p>--标量子查询</p> <p>--1．查询”销售部”的所有员工信息</p> <p>​		-- a．查询&quot;销售部”部门ID</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select id from dept where name =&quot;销售部';
+</code></pre></div><p>​		--b.根据销售部部门ID，查询员工信息</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select * from emp where dept_id = (select id from dept where name = ‘销售部');
+</code></pre></div><h3 id="列子查询"><a href="#列子查询" class="header-anchor">#</a> 列子查询</h3> <p>子查询返回的结果是一列（可以是多行)，这种子查询称为<strong>列子查询</strong>。
+常用的操作符:IN 、NOT IN 、ANY 、SOME、ALL</p> <table><thead><tr><th style="text-align:center;">操作符</th> <th style="text-align:center;">描述</th></tr></thead> <tbody><tr><td style="text-align:center;">IN</td> <td style="text-align:center;">在指定的集合范围之内，多选一</td></tr> <tr><td style="text-align:center;">NOT IN</td> <td style="text-align:center;">不在指定的集合范围之内</td></tr> <tr><td style="text-align:center;">ANY</td> <td style="text-align:center;">子查询返回列表中，有任意一个满足即可</td></tr> <tr><td style="text-align:center;">SOME</td> <td style="text-align:center;">与ANY等同，使用SOME的地方都可以使用ANY</td></tr> <tr><td style="text-align:center;">ALL</td> <td style="text-align:center;">子查询返回列表的所有值都必须满足</td></tr></tbody></table> <h3 id="行子查询"><a href="#行子查询" class="header-anchor">#</a> 行子查询</h3> <p>子查询返回的结果是一行（可以是多列)，这种子查询称为<strong>行子查询。</strong>
+常用的操作符:    =   、 &lt;&gt;  、  IN  、  NOT IN</p> <p><strong>例子：</strong></p> <p>--1.查询与“张无忌”的薪资及直属领导相同的员工信息;</p> <p>​		--a.查询“张无忌”的薪资及直属领导</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select salary,managerid from emp where name = '张无忌&quot;;
+</code></pre></div><p>​		--b.查询与“张无忌“的薪资及直属领导相同的员工信息;</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select * from emp where (salary ,managerid) = (select salary，managerid from emp where name = '张无忌');
+</code></pre></div><h3 id="表子查询"><a href="#表子查询" class="header-anchor">#</a> 表子查询</h3> <p>子查询返回的结果是多行多列，这种子查询称为<strong>表子查询。</strong></p> <p>常用操作符：IN</p> <p><strong>例子：</strong></p> <p>-- 1.查询与&quot;鹿杖客”，“宋远桥”的职位和薪资相同的员工信息。</p> <p>​		--a.查询“鹿杖客”，“宋远桥”的职位和薪资</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select job,salary from emp where name = '鹿杖客' or name = '宋远桥';
+</code></pre></div><p>​		--b.查询与&quot;鹿杖客”，“宋远桥”的职位和薪资相同的员工信息</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select * from emp where (job, salary) in ( select job,salary from emp where name ='鹿杖客'or name ='宋远桥');
+</code></pre></div><p>-- 2.查询入职日期是“2006-01-01”之后的员工信息，及其部门信息
+--a.入职日期是&quot;2006-01-01&quot;之后的员工信息</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select * from enp where entrydate &gt; '2006-01-01';
+</code></pre></div><p>​		--b.查询这部分员工，对应的部门信息;</p> <div class="language-mysql extra-class"><pre class="language-text"><code>select e.*,d.* from (select * from emp where entrydate &gt; '2006-01-01') e left join dept d on e.dept_id = d.id ;
+</code></pre></div><h2 id="多表查询-内连接外连接自链接"><a href="#多表查询-内连接外连接自链接" class="header-anchor">#</a> 多表查询—内连接外连接自链接</h2> <h3 id="连接查询-内连接"><a href="#连接查询-内连接" class="header-anchor">#</a> 连接查询—内连接</h3> <h5 id="内连接查询语法"><a href="#内连接查询语法" class="header-anchor">#</a> 内连接查询语法：</h5> <p>隐式内连接</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT 字段列表 FROM 表1，表2 WHERE 条件...；
+</code></pre></div><p>显式内连接</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 连接条件...；
+</code></pre></div><p><strong>注意</strong>：</p> <p>​	<strong>内连接查询的是两张表交集的部分</strong></p> <h3 id="连接查询-外连接"><a href="#连接查询-外连接" class="header-anchor">#</a> 连接查询—外连接</h3> <h5 id="外连接查询语法"><a href="#外连接查询语法" class="header-anchor">#</a> 外连接查询语法：</h5> <p>左外连接</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT 字段列表 FROM  表1 LEFT [OUTER] JOIN 表2 ON 条件...；
+</code></pre></div><p><strong>相当于查询表1(左表)的所有数据包含表1和表2交集部分的数据</strong></p> <p>右外连接</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT 字段列表 FROM  表1 RIGHT [OUTER] JOIN 表2 ON 条件...；
+</code></pre></div><p><strong>相当于查询表2(右表)的所有数据包含表1和表2交集部分的数据</strong></p> <h3 id="连接查询-自链接"><a href="#连接查询-自链接" class="header-anchor">#</a> 连接查询—自链接</h3> <h5 id="自连接查询语法"><a href="#自连接查询语法" class="header-anchor">#</a> 自连接查询语法</h5> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT 字段列表 FROM 表A 别名A JOIN 表A 别名B ON 条件...；
+</code></pre></div><p><strong>自连接查询，可以是内连接查询，也可以是外连接查询。</strong></p> <h3 id="联合查询-union-union-all"><a href="#联合查询-union-union-all" class="header-anchor">#</a> 联合查询—union，union all</h3> <p>对于union查询，就是把多次查询的结果合并起来，形成一个新的查询结果集。</p> <div class="language-mysql extra-class"><pre class="language-text"><code>SELECT 字段列表 FROM 表A ...
+
+UNION [ALL]
+
+SELECT 字段列表 FROM 表B...；
+</code></pre></div><p><strong>注意：</strong></p> <p>1.对于联合查询的多张表的列数必须保持一致，字段类型也需要保持一致。
+2.union all会将全部的数据直接合并在一起，union会对合并之后的数据去重。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/notebook/mysql/MySQLのDML.html" class="prev">
+        DML—介绍
+      </a></span> <span class="next"><a href="/docs/notebook/mysql/MySQL—函数.html">
+        MySQL—函数
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.ab6a45ad.js" defer></script><script src="/docs/assets/js/2.4c059ea7.js" defer></script><script src="/docs/assets/js/30.a4008b67.js" defer></script>
+  </body>
+</html>

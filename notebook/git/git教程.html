@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git教程基础常用命令 | itmua文案网</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/docs/img/logo.png">
+    <meta name="description" content="一个专注于文学的文档">
+    <meta name="keywords" content="文案解说,电影文案,电视剧文案,情感文案,文学知识,鸡汤文案">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.43f57b07.css" as="style"><link rel="preload" href="/docs/assets/js/app.ab6a45ad.js" as="script"><link rel="preload" href="/docs/assets/js/2.4c059ea7.js" as="script"><link rel="preload" href="/docs/assets/js/27.8be8c988.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.469f6138.js"><link rel="prefetch" href="/docs/assets/js/11.ca25ceab.js"><link rel="prefetch" href="/docs/assets/js/12.a435673a.js"><link rel="prefetch" href="/docs/assets/js/13.fdae9bb2.js"><link rel="prefetch" href="/docs/assets/js/14.74504247.js"><link rel="prefetch" href="/docs/assets/js/15.bcc7ac3a.js"><link rel="prefetch" href="/docs/assets/js/16.81ac3f1c.js"><link rel="prefetch" href="/docs/assets/js/17.ad0c7034.js"><link rel="prefetch" href="/docs/assets/js/18.96a7a29f.js"><link rel="prefetch" href="/docs/assets/js/19.5c4d87b9.js"><link rel="prefetch" href="/docs/assets/js/20.d40a66d5.js"><link rel="prefetch" href="/docs/assets/js/21.38e9e3e1.js"><link rel="prefetch" href="/docs/assets/js/22.11efd413.js"><link rel="prefetch" href="/docs/assets/js/23.60938067.js"><link rel="prefetch" href="/docs/assets/js/24.5b2f3183.js"><link rel="prefetch" href="/docs/assets/js/25.4cd66f04.js"><link rel="prefetch" href="/docs/assets/js/26.102ed2db.js"><link rel="prefetch" href="/docs/assets/js/28.7c79ab06.js"><link rel="prefetch" href="/docs/assets/js/29.4573089c.js"><link rel="prefetch" href="/docs/assets/js/3.474e0c06.js"><link rel="prefetch" href="/docs/assets/js/30.a4008b67.js"><link rel="prefetch" href="/docs/assets/js/31.c298eea4.js"><link rel="prefetch" href="/docs/assets/js/32.cf09aea3.js"><link rel="prefetch" href="/docs/assets/js/33.c79d7f6f.js"><link rel="prefetch" href="/docs/assets/js/34.7ee17e6b.js"><link rel="prefetch" href="/docs/assets/js/35.af41e1b7.js"><link rel="prefetch" href="/docs/assets/js/36.afdd2bd1.js"><link rel="prefetch" href="/docs/assets/js/4.79f505c9.js"><link rel="prefetch" href="/docs/assets/js/5.b1267c0a.js"><link rel="prefetch" href="/docs/assets/js/6.162a034e.js"><link rel="prefetch" href="/docs/assets/js/7.7af3a297.js"><link rel="prefetch" href="/docs/assets/js/8.1016007f.js"><link rel="prefetch" href="/docs/assets/js/9.7c701c66.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.43f57b07.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/img/logo.png" alt="itmua文案网" class="logo"> <span class="site-name can-hide">itmua文案网</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/docs/start/" class="nav-link">
+  开始使用
+</a></div><div class="nav-item"><a href="/docs/notebook/" class="nav-link router-link-active">
+  笔记库
+</a></div><div class="nav-item"><a href="/docs/filmcopy/" class="nav-link">
+  电影文案
+</a></div><div class="nav-item"><a href="/docs/life/" class="nav-link">
+  生活随记
+</a></div><div class="nav-item"><a href="/docs/60s/60.html" class="nav-link">
+  每日60秒
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源仓库" class="dropdown-title"><span class="title">开源仓库</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源仓库" class="mobile-dropdown-title"><span class="title">开源仓库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fanxing9420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/docs/notebook/git/.html#" class="nav-link">
+  #
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/docs/start/" class="nav-link">
+  开始使用
+</a></div><div class="nav-item"><a href="/docs/notebook/" class="nav-link router-link-active">
+  笔记库
+</a></div><div class="nav-item"><a href="/docs/filmcopy/" class="nav-link">
+  电影文案
+</a></div><div class="nav-item"><a href="/docs/life/" class="nav-link">
+  生活随记
+</a></div><div class="nav-item"><a href="/docs/60s/60.html" class="nav-link">
+  每日60秒
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源仓库" class="dropdown-title"><span class="title">开源仓库</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源仓库" class="mobile-dropdown-title"><span class="title">开源仓库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fanxing9420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/docs/notebook/git/.html#" class="nav-link">
+  #
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>MySQL笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Git笔记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/notebook/git/git教程.html" class="active sidebar-link">git教程基础常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_1-版本管理工具介绍" class="sidebar-link">1. 版本管理工具介绍</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_2-git-的安装" class="sidebar-link">2. Git 的安装</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_3-git-流程" class="sidebar-link">3. git 流程</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_4-命令行-git基本操作" class="sidebar-link">4.命令行-- git基本操作</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_5-命令行-git-远程仓库操作" class="sidebar-link">5. 命令行--git 远程仓库操作</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_6-命令行-分支" class="sidebar-link">6.  命令行-- 分支</a></li><li class="sidebar-sub-header"><a href="/docs/notebook/git/git教程.html#_7-命令行-tag" class="sidebar-link">7 . 命令行 --tag</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具类组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>方法类函数</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git教程基础常用命令"><a href="#git教程基础常用命令" class="header-anchor">#</a> git教程基础常用命令</h1> <img src="/docs/img/git/gitlogo.png"> <p>版本管理工具一般具有如下特性:</p> <div class="language- extra-class"><pre class="language-text"><code>1) 能够记录历史版本,回退历史版本
+2) 团队开发,方便代码合并
+</code></pre></div><h2 id="_1-版本管理工具介绍"><a href="#_1-版本管理工具介绍" class="header-anchor">#</a> 1. 版本管理工具介绍</h2> <p>现在比较流行的版本管理工具是git ,但是实际上git 是近几年才发展起来的,可能有一些老的项目,还在用一些老的软件,比如svn</p> <h3 id="_1-1版本管理发展简史-维基百科"><a href="#_1-1版本管理发展简史-维基百科" class="header-anchor">#</a> 1.1版本管理发展简史(维基百科)</h3> <p><img src="/docs/img/git/1571983065236.png" alt="1571983065236"></p> <h4 id="_1-1-1-svn-subversion"><a href="#_1-1-1-svn-subversion" class="header-anchor">#</a> 1.1.1 SVN(SubVersion)</h4> <p>工作流程</p> <div class="language- extra-class"><pre class="language-text"><code>SVN是集中式版本控制系统，版本库是集中放在中央服务器的.
+工作流程如下:
+	1.从中央服务器远程仓库下载代码
+	2.修改后将代码提交到中央服务器远程仓库
+</code></pre></div><p>优缺点:</p> <div class="language- extra-class"><pre class="language-text"><code> 优点: 简单,易操作
+ 缺点:所有代码必须放在中央服务器  
+  	   1.服务器一旦宕机无法提交代码,即容错性较差
+       2.离线无法提交代码,无法及时记录我们的提交行为
+</code></pre></div><p>svn流程图</p> <p><img src="/docs/img/git/svn.jpg" alt=""></p> <h2 id="_2-git-的安装"><a href="#_2-git-的安装" class="header-anchor">#</a> 2. Git 的安装</h2> <h3 id="_2-1-git-的下载"><a href="#_2-1-git-的下载" class="header-anchor">#</a> 2.1 git 的下载</h3> <p>下载地址： <a href="https://git-scm.com/download" target="_blank" rel="noopener noreferrer">https://git-scm.com/download<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p><img src="/docs/img/git/1571990833074.png" alt="1571990833074"></p> <h2 id="_3-git-流程"><a href="#_3-git-流程" class="header-anchor">#</a> 3. git 流程</h2> <h3 id="_3-1-流程图"><a href="#_3-1-流程图" class="header-anchor">#</a> 3.1 流程图</h3> <p><img src="/docs/img/git/git%E6%B5%81%E7%A8%8B.png" alt=""></p> <h3 id="_3-2-概念即详解"><a href="#_3-2-概念即详解" class="header-anchor">#</a> 3.2 概念即详解</h3> <div class="language- extra-class"><pre class="language-text"><code>本地仓库：是在开发人员自己电脑上的Git仓库,存放我们的代码(.git 隐藏文件夹就是我们的本地仓库)		
+远程仓库：是在远程服务器上的Git仓库,存放代码(可以是github.com或者gitee.com 上的仓库,或者自己该公司的服务器)
+工作区: 我们自己写代码(文档)的地方
+暂存区: 在 本地仓库中的一个特殊的文件(index) 叫做暂存区,临时存储我们即将要提交的文件
+------------
+Clone：克隆，就是将远程仓库复制到本地仓库
+Push：推送，就是将本地仓库代码上传到远程仓库
+Pull：拉取，就是将远程仓库代码下载到本地仓库,并将代码 克隆到本地工作区
+</code></pre></div><p><img src="/docs/img/git/git%E6%B5%81%E7%A8%8B_%E8%AF%A6%E8%A7%A3.png" alt=""></p> <h2 id="_4-命令行-git基本操作"><a href="#_4-命令行-git基本操作" class="header-anchor">#</a> 4.命令行-- git基本操作</h2> <h3 id="_4-1-介绍"><a href="#_4-1-介绍" class="header-anchor">#</a> 4.1  介绍</h3> <p>​	上述我们的操作 使用的 是客户端TortoiseGit 操作的git ,实际上底层依旧是使用的命令行帮我们执行, 在早期 git 并没有窗口化工具,开发人员只能使用命令行模式。</p> <h4 id="环境配置"><a href="#环境配置" class="header-anchor">#</a> 环境配置</h4> <p>当安装Git后首先要做的事情是设置用户名称和email地址。这是非常重要的，因为每次Git提交都会使用该用户信息</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment">#设置用户信息 </span>
+   <span class="token function">git</span> config --global user.name “itcast”
+   <span class="token function">git</span> config --global user.email “itcast@itcast.cn”
+<span class="token comment">#查看配置信息</span>
+   <span class="token function">git</span> config --list
+   <span class="token function">git</span> config user.name
+<span class="token comment">#通过上面的命令设置的信息会保存在~/.gitconfig文件中</span>
+
+</code></pre></div><h4 id="初始化本地仓库-init"><a href="#初始化本地仓库-init" class="header-anchor">#</a> 初始化本地仓库 init</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 初始化仓库带工作区</span>
+<span class="token function">git</span> init
+<span class="token comment"># 初始化仓库不带工作区</span>
+<span class="token function">git</span> init --bare  
+</code></pre></div><h4 id="克隆-clone"><a href="#克隆-clone" class="header-anchor">#</a> 克隆 clone</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 从远程仓库克隆</span>
+<span class="token function">git</span> clone 远程Git仓库地址 
+例如: <span class="token function">git</span> clone https://gitee.com/itcast/gittest.git
+</code></pre></div><h4 id="查看状态-status"><a href="#查看状态-status" class="header-anchor">#</a> 查看状态 status</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 查看状态</span>
+<span class="token function">git</span> status 
+<span class="token comment">#查看状态 使输出信息更加简洁</span>
+<span class="token function">git</span> status –s 
+</code></pre></div><h4 id="add"><a href="#add" class="header-anchor">#</a> add</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 将未跟踪的文件加入暂存区</span>
+<span class="token function">git</span> <span class="token function">add</span>  <span class="token operator">&lt;</span>文件名<span class="token operator">&gt;</span>  
+<span class="token comment"># 将暂存区的文件取消暂存 (取消 add )</span>
+<span class="token function">git</span> reset  <span class="token operator">&lt;</span>文件名<span class="token operator">&gt;</span>  
+
+</code></pre></div><h4 id="commit"><a href="#commit" class="header-anchor">#</a> commit</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># git commit 将暂存区的文件修改提交到本地仓库</span>
+<span class="token function">git</span> commit -m <span class="token string">&quot;日志信息&quot;</span>  <span class="token operator">&lt;</span>文件名<span class="token operator">&gt;</span>  
+
+</code></pre></div><h4 id="rm"><a href="#rm" class="header-anchor">#</a> rm</h4> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 从本地工作区 删除文件</span>
+<span class="token function">git</span> <span class="token function">rm</span> <span class="token operator">&lt;</span>文件名<span class="token operator">&gt;</span>  
+<span class="token comment"># 如果本工作区库误删, 想要回退</span>
+<span class="token function">git</span> checkout <span class="token function">head</span> <span class="token operator">&lt;</span>文件名<span class="token operator">&gt;</span>  
+</code></pre></div><h2 id="_5-命令行-git-远程仓库操作"><a href="#_5-命令行-git-远程仓库操作" class="header-anchor">#</a> 5. 命令行--git 远程仓库操作</h2> <h3 id="_5-1-查看远程"><a href="#_5-1-查看远程" class="header-anchor">#</a> 5.1    查看远程</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 查看远程  列出指定的每一个远程服务器的简写</span>
+<span class="token function">git</span> remote 
+<span class="token comment"># 查看远程 , 列出 简称和地址</span>
+<span class="token function">git</span> remote  -v  
+<span class="token comment"># 查看远程仓库详细地址</span>
+<span class="token function">git</span> remote show  <span class="token operator">&lt;</span>仓库简称<span class="token operator">&gt;</span>
+
+</code></pre></div><h3 id="_5-2-添加-移除远测仓库"><a href="#_5-2-添加-移除远测仓库" class="header-anchor">#</a> 5.2 添加/移除远测仓库</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 添加远程仓库</span>
+<span class="token function">git</span> remote <span class="token function">add</span> <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span>
+<span class="token comment"># 移除远程仓库和本地仓库的关系(只是从本地移除远程仓库的关联关系，并不会真正影响到远程仓库)</span>
+<span class="token function">git</span> remote <span class="token function">rm</span> <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span> 
+</code></pre></div><h3 id="_5-3-从远程仓库获取代码"><a href="#_5-3-从远程仓库获取代码" class="header-anchor">#</a> 5.3 从远程仓库获取代码</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 从远程仓库克隆</span>
+<span class="token function">git</span> clone <span class="token operator">&lt;</span>url<span class="token operator">&gt;</span> 
+<span class="token comment"># 从远程仓库拉取 (拉取到.git 目录,不会合并到工作区,工作区发生变化)</span>
+<span class="token function">git</span> fetch  <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>分支名称<span class="token operator">&gt;</span>
+<span class="token comment"># 手动合并  把某个版本的某个分支合并到当前工作区</span>
+<span class="token function">git</span> merge <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>分支名称<span class="token operator">&gt;</span>
+<span class="token comment"># 从远程仓库拉取 (拉取到.git 目录,合并到工作区,工作区不发生变化) = fetch+merge</span>
+<span class="token function">git</span> pull  <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>分支名称<span class="token operator">&gt;</span>
+<span class="token function">git</span> pull  <span class="token operator">&lt;</span>shortname<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>分支名称<span class="token operator">&gt;</span>  --allow-unrelated-histories  <span class="token comment">#  强制拉取合并</span>
+</code></pre></div><p>注意：如果当前本地仓库不是从远程仓库克隆，而是本地创建的仓库，并且仓库中存在文件，此时再从远程仓库拉取文件的时候会报错（fatal: refusing to merge unrelated histories ），解决此问题可以在git pull命令后加入参数--allow-unrelated-histories (如上 命令)</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 将本地仓库推送至远程仓库的某个分支</span>
+<span class="token function">git</span> push <span class="token punctuation">[</span>remote-name<span class="token punctuation">]</span> <span class="token punctuation">[</span>branch-name<span class="token punctuation">]</span>
+</code></pre></div><h2 id="_6-命令行-分支"><a href="#_6-命令行-分支" class="header-anchor">#</a> 6.  命令行-- 分支</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 默认 分支名称为 master</span>
+<span class="token comment"># 列出所有本地分支</span>
+<span class="token function">git</span> branch
+<span class="token comment"># 列出所有远程分支</span>
+<span class="token function">git</span> branch -r
+<span class="token comment"># 列出所有本地分支和远程分支</span>
+<span class="token function">git</span> branch -a
+<span class="token comment"># 创建分支</span>
+<span class="token function">git</span> branch <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span>
+<span class="token comment"># 切换分支 </span>
+<span class="token function">git</span> checkout <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span>
+<span class="token comment"># 删除分支(如果分支已经修改过,则不允许删除)</span>
+<span class="token function">git</span> branch -d  <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span>
+<span class="token comment"># 强制删除分支</span>
+<span class="token function">git</span> branch -D  <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span>
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 提交分支至远程仓库</span>
+<span class="token function">git</span> push <span class="token operator">&lt;</span>仓库简称<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>分支名称<span class="token operator">&gt;</span>	
+<span class="token comment"># 合并分支 将其他分支合并至当前工作区</span>
+<span class="token function">git</span> merge <span class="token operator">&lt;</span>分支名称<span class="token operator">&gt;</span>
+<span class="token comment"># 删除远程仓库分支</span>
+<span class="token function">git</span> push origin –d branchName
+</code></pre></div><h2 id="_7-命令行-tag"><a href="#_7-命令行-tag" class="header-anchor">#</a> 7 . 命令行 --tag</h2> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 列出所有tag</span>
+<span class="token function">git</span> tag
+<span class="token comment"># 查看tag详细信息 </span>
+<span class="token function">git</span> show <span class="token punctuation">[</span>tagName<span class="token punctuation">]</span>
+<span class="token comment"># 新建一个tag</span>
+<span class="token function">git</span> tag <span class="token punctuation">[</span>tagName<span class="token punctuation">]</span>
+<span class="token comment"># 提交指定tag</span>
+$ <span class="token function">git</span> push <span class="token punctuation">[</span>仓库简称<span class="token punctuation">]</span> <span class="token punctuation">[</span>tagName<span class="token punctuation">]</span>
+<span class="token comment"># 新建一个分支，指向某个tag</span>
+$ <span class="token function">git</span> checkout -b <span class="token punctuation">[</span>branch<span class="token punctuation">]</span> <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+<span class="token comment"># 删除本地tag</span>
+$ <span class="token function">git</span> tag -d <span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+<span class="token comment"># 删除远程tag (注意 空格)</span>
+$ <span class="token function">git</span> push origin :refs/tags/<span class="token punctuation">[</span>tag<span class="token punctuation">]</span>
+
+</code></pre></div><p>`</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/notebook/mysql/MySQL—约束.html" class="prev">
+        MySQL—约束
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.ab6a45ad.js" defer></script><script src="/docs/assets/js/2.4c059ea7.js" defer></script><script src="/docs/assets/js/27.8be8c988.js" defer></script>
+  </body>
+</html>

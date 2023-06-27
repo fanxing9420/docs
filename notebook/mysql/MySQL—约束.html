@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL—约束 | itmua文案网</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/docs/img/logo.png">
+    <meta name="description" content="一个专注于文学的文档">
+    <meta name="keywords" content="文案解说,电影文案,电视剧文案,情感文案,文学知识,鸡汤文案">
+    
+    <link rel="preload" href="/docs/assets/css/0.styles.43f57b07.css" as="style"><link rel="preload" href="/docs/assets/js/app.ab6a45ad.js" as="script"><link rel="preload" href="/docs/assets/js/2.4c059ea7.js" as="script"><link rel="preload" href="/docs/assets/js/31.c298eea4.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.469f6138.js"><link rel="prefetch" href="/docs/assets/js/11.ca25ceab.js"><link rel="prefetch" href="/docs/assets/js/12.a435673a.js"><link rel="prefetch" href="/docs/assets/js/13.fdae9bb2.js"><link rel="prefetch" href="/docs/assets/js/14.74504247.js"><link rel="prefetch" href="/docs/assets/js/15.bcc7ac3a.js"><link rel="prefetch" href="/docs/assets/js/16.81ac3f1c.js"><link rel="prefetch" href="/docs/assets/js/17.ad0c7034.js"><link rel="prefetch" href="/docs/assets/js/18.96a7a29f.js"><link rel="prefetch" href="/docs/assets/js/19.5c4d87b9.js"><link rel="prefetch" href="/docs/assets/js/20.d40a66d5.js"><link rel="prefetch" href="/docs/assets/js/21.38e9e3e1.js"><link rel="prefetch" href="/docs/assets/js/22.11efd413.js"><link rel="prefetch" href="/docs/assets/js/23.60938067.js"><link rel="prefetch" href="/docs/assets/js/24.5b2f3183.js"><link rel="prefetch" href="/docs/assets/js/25.4cd66f04.js"><link rel="prefetch" href="/docs/assets/js/26.102ed2db.js"><link rel="prefetch" href="/docs/assets/js/27.8be8c988.js"><link rel="prefetch" href="/docs/assets/js/28.7c79ab06.js"><link rel="prefetch" href="/docs/assets/js/29.4573089c.js"><link rel="prefetch" href="/docs/assets/js/3.474e0c06.js"><link rel="prefetch" href="/docs/assets/js/30.a4008b67.js"><link rel="prefetch" href="/docs/assets/js/32.cf09aea3.js"><link rel="prefetch" href="/docs/assets/js/33.c79d7f6f.js"><link rel="prefetch" href="/docs/assets/js/34.7ee17e6b.js"><link rel="prefetch" href="/docs/assets/js/35.af41e1b7.js"><link rel="prefetch" href="/docs/assets/js/36.afdd2bd1.js"><link rel="prefetch" href="/docs/assets/js/4.79f505c9.js"><link rel="prefetch" href="/docs/assets/js/5.b1267c0a.js"><link rel="prefetch" href="/docs/assets/js/6.162a034e.js"><link rel="prefetch" href="/docs/assets/js/7.7af3a297.js"><link rel="prefetch" href="/docs/assets/js/8.1016007f.js"><link rel="prefetch" href="/docs/assets/js/9.7c701c66.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.43f57b07.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/img/logo.png" alt="itmua文案网" class="logo"> <span class="site-name can-hide">itmua文案网</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/docs/start/" class="nav-link">
+  开始使用
+</a></div><div class="nav-item"><a href="/docs/notebook/" class="nav-link router-link-active">
+  笔记库
+</a></div><div class="nav-item"><a href="/docs/filmcopy/" class="nav-link">
+  电影文案
+</a></div><div class="nav-item"><a href="/docs/life/" class="nav-link">
+  生活随记
+</a></div><div class="nav-item"><a href="/docs/60s/60.html" class="nav-link">
+  每日60秒
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源仓库" class="dropdown-title"><span class="title">开源仓库</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源仓库" class="mobile-dropdown-title"><span class="title">开源仓库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fanxing9420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/docs/notebook/mysql/.html#" class="nav-link">
+  #
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/docs/start/" class="nav-link">
+  开始使用
+</a></div><div class="nav-item"><a href="/docs/notebook/" class="nav-link router-link-active">
+  笔记库
+</a></div><div class="nav-item"><a href="/docs/filmcopy/" class="nav-link">
+  电影文案
+</a></div><div class="nav-item"><a href="/docs/life/" class="nav-link">
+  生活随记
+</a></div><div class="nav-item"><a href="/docs/60s/60.html" class="nav-link">
+  每日60秒
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源仓库" class="dropdown-title"><span class="title">开源仓库</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源仓库" class="mobile-dropdown-title"><span class="title">开源仓库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/fanxing9420" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="/docs/notebook/mysql/.html#" class="nav-link">
+  #
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>MySQL笔记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/notebook/mysql/MySQLのDCL.html" class="sidebar-link">DCL—介绍</a></li><li><a href="/docs/notebook/mysql/MySQLのDQL.html" class="sidebar-link">DQL—介绍</a></li><li><a href="/docs/notebook/mysql/MySQLのDDL.html" class="sidebar-link">DDL—介绍</a></li><li><a href="/docs/notebook/mysql/MySQLのDML.html" class="sidebar-link">DML—介绍</a></li><li><a href="/docs/notebook/mysql/MySQL—多表查询.html" class="sidebar-link">MySQL—多表查询</a></li><li><a href="/docs/notebook/mysql/MySQL—函数.html" class="sidebar-link">MySQL—函数</a></li><li><a href="/docs/notebook/mysql/MySQL—事务.html" class="sidebar-link">MySQL—事务</a></li><li><a href="/docs/notebook/mysql/MySQL—约束.html" class="active sidebar-link">MySQL—约束</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git笔记</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具类组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>方法类函数</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mysql-约束"><a href="#mysql-约束" class="header-anchor">#</a> MySQL—约束</h1> <h3 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h3> <p>1.概念:约束是作用于表中字段上的规则，用于限制存储在表中的数据。</p> <p>2.目的:保证数据库中数据的正确、有效性和完整性。</p> <p>3.分类:</p> <table><thead><tr><th>约束</th> <th>描述</th> <th>关键字</th></tr></thead> <tbody><tr><td>非空约束</td> <td>限制字段的数据不能为null</td> <td>NOT NULL</td></tr> <tr><td>唯一约束</td> <td>保证该字段的所有数据都是唯一，不重复的</td> <td>UNIQUE</td></tr> <tr><td>主键约束</td> <td>主键是一行数据的唯一标识，要求非空且唯一</td> <td>PRIMARY KEY</td></tr> <tr><td>默认约束</td> <td>保存数据时，如果未指定该字段的值，则采用默认值</td> <td>DEFAULT</td></tr> <tr><td>检查约束</td> <td>保证字段值满足某一条件</td> <td>CHECK</td></tr> <tr><td>外键约束</td> <td>用来让两张表的数据之间建立连接，保证数据的一致性和完整性</td> <td>FOREIGN KEY</td></tr></tbody></table> <p><strong>注意:约束是作用于表中字段上的，可以在创建表/修改表的时候添加约束。</strong></p> <h3 id="约束演示"><a href="#约束演示" class="header-anchor">#</a> 约束演示</h3> <p>例子:</p> <div class="language-mysql extra-class"><pre class="language-text"><code>create table user(
+    id int primary key auto_increment comment  '主键',
+    name varchar(10) not null unique  comment '姓名',
+    age int check (age&gt;0 &amp;&amp; age &lt;=120) comment '年龄',
+    status char(1) default '1' comment  '状态',
+    gender char(1) comment  '性别'
+) comment '用户表';
+</code></pre></div><h3 id="外键约束"><a href="#外键约束" class="header-anchor">#</a> 外键约束</h3> <h5 id="概念"><a href="#概念" class="header-anchor">#</a> 概念</h5> <p>​	<strong>外键用来让两张表的数据之间建立连接，从而保证数据的一致性和完整性。</strong></p> <h5 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h5> <p>1.添加外键</p> <p>①</p> <div class="language-mysql extra-class"><pre class="language-text"><code>CREATE TABLE 表名(
+
+字段名 数据类型
+
+...
+
+[CONSTRAINT]	[外键名称]	FOREIGN KEY(外键字段名) REFERENCES 主表(主表列名)
+
+);
+</code></pre></div><p>②</p> <div class="language-mysql extra-class"><pre class="language-text"><code>ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY(外键字段名) REFERENCES 主表(主表列名);
+</code></pre></div><p>2.删除外键</p> <div class="language-mysql extra-class"><pre class="language-text"><code>ALTER TABLE 表名 DROP FOREIGN KEY 外键名称；
+</code></pre></div><h5 id="删除-更新行为"><a href="#删除-更新行为" class="header-anchor">#</a> 删除/更新行为</h5> <table><thead><tr><th style="text-align:center;">行为</th> <th style="text-align:center;">说明</th></tr></thead> <tbody><tr><td style="text-align:center;">NO ACTION</td> <td style="text-align:center;">当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除/更新。(与RESTRICT一致)</td></tr> <tr><td style="text-align:center;">RESTRICT</td> <td style="text-align:center;">当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除/更新。(与NOACTION一致)</td></tr> <tr><td style="text-align:center;">CASCADE</td> <td style="text-align:center;">当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有，则也删除/更新外键在子表中的记录。</td></tr> <tr><td style="text-align:center;">SET NULL</td> <td style="text-align:center;">当在父表中删除对应记录时，首先检查该记录是否有对应外键，如果有则设置子表中该外键值为nul(这就要求该外键允许取null）。</td></tr> <tr><td style="text-align:center;">SET DEFAULT</td> <td style="text-align:center;">父表有变更时，子表将外键列设置成一个默认的值(Innodb不支持)</td></tr></tbody></table> <div class="language-mysql extra-class"><pre class="language-text"><code>ALTER 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段) REFERENCES 主表名(主表字段名) ON UPDATE  删除/更新行为 ON DELETE 删除/更新行为;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/notebook/mysql/MySQL—事务.html" class="prev">
+        MySQL—事务
+      </a></span> <span class="next"><a href="/docs/notebook/git/git教程.html">
+        git教程基础常用命令
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.ab6a45ad.js" defer></script><script src="/docs/assets/js/2.4c059ea7.js" defer></script><script src="/docs/assets/js/31.c298eea4.js" defer></script>
+  </body>
+</html>
